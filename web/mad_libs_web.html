@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mad lib web</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="flexbox.css">
+    <link rel="stylesheet" href="mad_libs_web.css">
+  
+    <style>
+      input 
+      {
+        width: 215px;
+        margin: 0 0 5px 0;
+      }
+      
+      .btn
+      {
+        cursor: default;
+        margin: 10px 0 10px 0; 
+      }
+      
+      p
+      {
+        margin-top: 10px;
+      }
+      
+      #sample_container_id
+      {
+        padding: 10px;
+      }
+      
+      .hide
+      {
+        display: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Mad lib web</h1>
+    
+    <p>Hello world from Dart!</p>
+    
+    <div id="sample_container_id">
+      <form id="form" class="flexbox-column-nowrap flex-align-items-start"  style="width: 300px;">
+        <input id="name-box" type="text" placeholder="Enter your name!">
+        <input id="noun-box" type="text" placeholder="Enter a noun...">
+        <input id="verb-box" type="text" placeholder="Enter a verb...">
+        <input id="adv-box" type="text" placeholder="Enter an adverb...">
+        <input id="adj-box" type="text" placeholder="Enter an adjective...">
+        <button id="button" class="btn btn-primary">Generate Mad Lib!</button>
+      </form>
+      <p class="hide" id="madlib">Hello, <span id="name"></span>! I heard you would like to <span id="adv"></span> <span id="verb"></span> a <span id="adj"></span> <span id="noun"></span>.</p>
+    </div>
+
+    <script type="application/dart" src="mad_libs_web.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
